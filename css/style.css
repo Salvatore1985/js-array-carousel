@@ -1,18 +1,31 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main .my-container{
+    height: 100vh;
+    background-color: aquamarine;
+   position: relative;
+}
+
+main .my-row{
+    width: 60%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+div#gallery{
+    height: 60vh;
+    overflow: hidden;
+}
+
+
 div#gallery img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
-}
-
-
-main {
-    height: 100vh;
-    width: 100vw;
-  
-}
-
-main div.container-fluid{
-    height: 60vh;
-    width: 60vw;
-    background-color: blue;
 
 }
