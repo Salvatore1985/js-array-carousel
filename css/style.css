@@ -1,0 +1,18 @@
+div#gallery img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+main {
+    height: 100vh;
+    width: 100vw;
+  
+}
+
+main div.container-fluid{
+    height: 60vh;
+    width: 60vw;
+    background-color: blue;
+
+}
