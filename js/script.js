@@ -33,24 +33,64 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-let listImages = "";
-
+let galleryGlassContent = "";
+let galleryMiniContent = "";
 
 for (let i = 0; i < items.length; i++) {
-    listImages += `
-     <img class="carousel-element" src="${items[i]}" alt="">`
-};
-console.log(listImages);
+    galleryGlassContent += ` <div class="my-img-container">
+    <div class="oneImg">
+        <img src="${items[i]}" alt="${title[i]}">
+    </div>
+    <div class="p-3" id="wrapped-text">
+        <h2>${title[i]}</h2>
+        <p>${text[i]}</p>
+    </div>
+</div>  
 
-/*
-const provaElement = document.querySelector("div#gallery");
-const carouselElements = document.getElementsByClassName('carousel-element');
-const bookmarkElements = document.getElementsByClassName('circle');
+    `
+    galleryMiniContent += `
+    <div class=""><img class="img-fluid" src="${items[i]}" alt="${title[i]}"></div>
+    `
+}
 
-carouselElements[0].classList.add('active');
-bookmarkElements[0].classList.add('active');
-console.log(carouselElements);
+//*RECUPERO L'ELEMENTO DAL DOM
 
+const wrappedGlassElement = document.getElementById("gallery-glass");
+console.log(wrappedGlassElement);
+wrappedGlassElement.innerHTML += galleryGlassContent;
+
+
+const wrappedGalleryMiniElement = document.getElementById("wrapped-gallery-mini");
+console.log(wrappedGalleryMiniElement);
+wrappedGalleryMiniElement.innerHTML += galleryMiniContent;
+
+/**   <!--    <div class="my-img-container">
+                                <div class="oneImg">
+                                    <img src="img/01.jpg" alt="">
+                                </div>
+                                <div class="p-3" id="wrapped-text">
+                                    <h2>lorem</h2>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad excepturi libero,
+                                        vel
+                                        earum quaerat provident laborum ea accusantium, quae quisquam, rem officiis aut
+                                        molestias. Facilis libero voluptatibus inventore nobis dicta!</p>
+                                </div>
+                            </div> --> */
+
+/**
+ *  <div class="">
+                                    <img class="img-fluid" src="img/01.jpg" alt="">
+                                </div>
+                                <div class="">
+                                    <img class="img-fluid" src="img/02.jpg" alt="">
+                                </div>
+                                <div class="">
+                                    <img class="img-fluid" src="img/03.jpg" alt="">
+                                </div>
+                                <div class="">
+                                    <img class="img-fluid" src="img/04.jpg" alt="">
+                                </div>
+                                <div class="">
+                                    <img class="img-fluid" src="img/05.jpg" alt="">
+                                </div>
  */
-
-
