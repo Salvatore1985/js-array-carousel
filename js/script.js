@@ -49,7 +49,7 @@ for (let i = 0; i < items.length; i++) {
 
     `
     galleryMiniContent += `
-    <div class=""><img class="img-fluid" src="${items[i]}" alt="${title[i]}"></div>
+    <div class="my-cover"><img class="img-fluid" src="${items[i]}" alt="${title[i]}"></div>
     `
 }
 
@@ -64,33 +64,13 @@ const wrappedGalleryMiniElement = document.getElementById("wrapped-gallery-mini"
 console.log(wrappedGalleryMiniElement);
 wrappedGalleryMiniElement.innerHTML += galleryMiniContent;
 
-/**   <!--    <div class="my-img-container">
-                                <div class="oneImg">
-                                    <img src="img/01.jpg" alt="">
-                                </div>
-                                <div class="p-3" id="wrapped-text">
-                                    <h2>lorem</h2>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad excepturi libero,
-                                        vel
-                                        earum quaerat provident laborum ea accusantium, quae quisquam, rem officiis aut
-                                        molestias. Facilis libero voluptatibus inventore nobis dicta!</p>
-                                </div>
-                            </div> --> */
 
-/**
- *  <div class="">
-                                    <img class="img-fluid" src="img/01.jpg" alt="">
-                                </div>
-                                <div class="">
-                                    <img class="img-fluid" src="img/02.jpg" alt="">
-                                </div>
-                                <div class="">
-                                    <img class="img-fluid" src="img/03.jpg" alt="">
-                                </div>
-                                <div class="">
-                                    <img class="img-fluid" src="img/04.jpg" alt="">
-                                </div>
-                                <div class="">
-                                    <img class="img-fluid" src="img/05.jpg" alt="">
-                                </div>
- */
+//* INIALIZZO GLI ELEMENTI CHE VOGLIO VISUALIZZARE IN ACTIVE PER PRIMI
+let activeElement = 1;
+
+//*PRENDO LA LISTA DEGLI ITEMS E DA QUESTO O PRESO L'ELEMENTO DELL'INDICE ACTIVEeLEMENT
+//*AL QUALE HO AGGIUNTO LA CLASSE ACTIVE
+
+document.getElementsByClassName("my-img-container")[activeElement].classList.add("active");
+
+document.getElementsByClassName("my-cover")[activeElement].classList.add("active");
