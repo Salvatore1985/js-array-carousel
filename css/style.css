@@ -6,20 +6,31 @@ div#wrapped-gallery{
 div#gallery-glass,
 div#gallery-mini{
     height: 100%;
+    position: relative;
 }
 
 div#gallery-glass{
     width: 80%;
-   
-    position: relative;
-   
+    display: none;
+}
+
+
+div#gallery-glass.active,
+div#wrapped-gallery-mini div.active{
+    display: block;
 }
 
 div#gallery-mini{
     width: 20%;
-    background-color: bisque;
+    
 }
-
+div#wrapped-gallery-mini div.active{
+  filter: brightness(1.1);
+  border: 2.5px solid gray;
+}
+div#wrapped-gallery-mini div{
+    filter: brightness(.5);
+  }
 
 /*  WRAPPED TEXT*/
 
@@ -29,7 +40,6 @@ div#wrapped-text{
     position: absolute;
     bottom: 0;
     right: 0;
-    
     
 }
 
@@ -41,6 +51,45 @@ div#gallery-glass div img{
     
 }
 
+
+
 #oneImg{
     height: 100%;
+}
+
+.forward::after,
+.back::before{
+    
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(218, 211, 211,0.8);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    line-height: 2rem;
+font-size: large;
+
+}
+
+.forward::after{
+    content: "\21E7";
+    top:1rem;
+
+}
+.back::before{
+    content: "\21E9";
+    bottom: 1rem;
+       
+}
+div#wrapped-gallery-mini{
+    height: 100%;
+}
+
+div#wrapped-gallery-mini div img{
+    height: 12vh;
+    width: 100%;
 }
