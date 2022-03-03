@@ -54,6 +54,24 @@ div#gallery-glass div img{
     
 }
 
+/**PUNTO PAGINA*/
+div#point{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: rotateX(-50%);
+}
+.point-circle{
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    background-color: gray;
+    border-radius: 50%;
+
+}
+.point-circle.active{
+    background-color: antiquewhite;
+}
 
 
 .oneImg{
@@ -96,3 +114,4 @@ div#wrapped-gallery-mini div img{
     height: 12vh;
     width: 100%;
 }
+

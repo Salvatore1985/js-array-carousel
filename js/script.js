@@ -1,11 +1,11 @@
 //*RECUPERO L'ELEMNTO DAL DOM
-const galleryElement = document.getElementById("gallery");
-
-/* const provaElement = document.getElementById("prova"); */
+/* const galleryElement = document.getElementById("gallery"); */
 
 const buttonMyAngleUp = document.querySelector("div.my-angle-up");
 const buttonMyAngleDown = document.querySelector("div.my-angle-down");
-
+const wrappedGlassElement = document.getElementById("gallery-glass");
+const pointPageElement = document.getElementById("point");
+const wrappedGalleryMiniElement = document.getElementById("wrapped-gallery-mini");
 
 
 //**GREO UN ARRAY DI IMMAGINI
@@ -35,6 +35,7 @@ const text = [
 
 let galleryGlassContent = "";
 let galleryMiniContent = "";
+let pointPageContent = "";
 
 for (let i = 0; i < items.length; i++) {
     galleryGlassContent += ` <div class="my-img-container">
@@ -46,23 +47,25 @@ for (let i = 0; i < items.length; i++) {
         <p>${text[i]}</p>
     </div>
 </div>  
-
     `
+
+    pointPageContent += `
+    <span class="point-circle"></span>`
+
+
     galleryMiniContent += `
     <div class="my-cover"><img class="img-fluid" src="${items[i]}" alt="${title[i]}"></div>
     `
 }
 
-//*RECUPERO L'ELEMENTO DAL DOM
 
-const wrappedGlassElement = document.getElementById("gallery-glass");
-console.log(wrappedGlassElement);
+//*INNESTO L'ELEMENTO NEL DOM
 wrappedGlassElement.innerHTML += galleryGlassContent;
-
-
-const wrappedGalleryMiniElement = document.getElementById("wrapped-gallery-mini");
-console.log(wrappedGalleryMiniElement);
 wrappedGalleryMiniElement.innerHTML += galleryMiniContent;
+pointPageElement.innerHTML += pointPageContent;
+
+
+
 
 
 //* INIALIZZO GLI ELEMENTI CHE VOGLIO VISUALIZZARE IN ACTIVE PER PRIMI
