@@ -33,6 +33,7 @@ div#wrapped-gallery-mini div.active{
 }
 div#wrapped-gallery-mini div{
     filter: brightness(.5);
+    cursor: pointer;
   }
 
 /*  WRAPPED TEXT*/

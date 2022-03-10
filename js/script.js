@@ -86,6 +86,7 @@ buttonForward.addEventListener("click", function () {
     document.getElementsByClassName("my-img-container")[activeElement].classList.remove("active");
     document.getElementsByClassName("my-cover")[activeElement].classList.remove("active");
     document.getElementsByClassName("point-circle")[activeElement].classList.remove("active");
+
     if (activeElement === 0) {
         activeElement = items.length - 1;
     } else {
@@ -95,6 +96,7 @@ buttonForward.addEventListener("click", function () {
     document.getElementsByClassName("my-img-container")[activeElement].classList.add("active");
     document.getElementsByClassName("my-cover")[activeElement].classList.add("active");
     document.getElementsByClassName("point-circle")[activeElement].classList.add("active");
+
 });
 
 const buttonBack = document.querySelector("div.back");
@@ -102,6 +104,7 @@ buttonBack.addEventListener("click", function () {
     document.getElementsByClassName("my-img-container")[activeElement].classList.remove("active");
     document.getElementsByClassName("my-cover")[activeElement].classList.remove("active");
     document.getElementsByClassName("point-circle")[activeElement].classList.remove("active");
+
 
     if (activeElement === items.length - 1) {
         activeElement = 0;
@@ -112,4 +115,5 @@ buttonBack.addEventListener("click", function () {
     document.getElementsByClassName("my-img-container")[activeElement].classList.add("active");
     document.getElementsByClassName("my-cover")[activeElement].classList.add("active");
     document.getElementsByClassName("point-circle")[activeElement].classList.add("active");
+
 });
